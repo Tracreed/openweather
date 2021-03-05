@@ -141,8 +141,8 @@ impl fmt::Display for ErrorReport {
 #[derive(Serialize, Deserialize, Debug, PartialEq, Default)]
 pub struct Sys {
     #[serde(rename = "type")]
-    pub message_type: u32,
-    pub id: u32,
+    pub message_type: Option<u32>,
+    pub id: Option<u32>,
     pub message: Option<f32>,
     pub country: String,
     pub sunrise: u64,
